@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="./profile.css">
+    <script defer src="profile.js"></script>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">Athleti<span class="highlight">Q</span></div>
+     	 <ul class="nav-links">
+        <a id="logout-btn"  href="index.html" class="button">Log Out</a>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="account">
+    <section class="profile">
+        <div class="profile-header">
+            <img src="images/profile_pic.jpg" class="profile-pic">
+        </div>
+        <div class="profile-info">
+            <h2>WELCOME, <span id="displayUsername">!</span></h2>
+            <p><strong>Weight:</strong> <span id="weight">-</span> kg</p>
+            <p><strong>Height:</strong> <span id="height">-</span> cm</p>
+            <p><strong>Goal:</strong> <span id="goal">-</span></p>
+            <p><strong>BMI:</strong> <span id="bmi">-</span></p>
+        </div>
+    </section>
+    
+    <div class="content">
+        <section id="workout-recommendations" class="section">
+            <h2>WORKOUT</h2>
+            <p>🔥 Recommended Workouts</p>
+            <div class="workout-list">
+                <div class="workout-card">
+                    <img src="https://img.youtube.com/vi/y87vSUoIMGU/0.jpg" alt="Workout Thumbnail">
+                    <h3>Full Body Strength</h3>
+                    <p>An effective workout for the whole body.</p>
+                    <a href="https://youtu.be/y87vSUoIMGU?si=8BPfAK4ITQOrJlSj" target="_blank" class="button">Watch</a>
+                </div>
+        
+                <div class="workout-card">
+                    <img src="https://img.youtube.com/vi/M0uO8X3_tEA/0.jpg" alt="Workout Thumbnail">
+                    <h3>HIIT Cardio</h3>
+                    <p>Cardio-intensive for fat burning.</p>
+                    <a href="https://youtu.be/M0uO8X3_tEA?si=DudzoxppXyKlI5iV" target="_blank" class="button">Watch</a>
+                </div>
+        
+                <div class="workout-card">
+                    <img src="https://img.youtube.com/vi/UIPvIYsjfpo/0.jpg" alt="Workout Thumbnail">
+                    <h3>Full Body Workout</h3>
+                    <p>Strength training for the whole body.</p>
+                    <a href="https://youtu.be/UIPvIYsjfpo?si=-DBPRN3g1TnI-8C_" target="_blank" class="button">Watch</a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="nutrition" class="section">
+            <h2>NUTRITION</h2>
+            <div class="dropdown">
+                <div class="dropdown-header" onclick="toggleDropdown('breakfastContent', 'icon-breakfast')">
+                    <span class="arrow" id="icon-breakfast">▶</span> Breakfast
+                </div>
+                <div class="dropdown-content" id="breakfastContent">
+                    <div class="recipe-card" onclick="openRecipe(
+                        'Greek Yogurt with Honey and Nuts',
+                        'images/yogurt.jpg',
+                        'A delicious and healthy breakfast option.',
+                        '280 kcal / 15g Protein / 10g Fat / 30g Carbs',
+                        'Ingredients: 150g Greek yogurt, 1 tsp honey, 10g nuts (walnuts, almonds), ½ banana.',
+                        'Instructions: Place the Greek yogurt in a bowl. Drizzle with honey, add chopped nuts, and sliced banana.'
+                    )">
+                        <img src="images/yogurt.jpg">
+                        <h3>Greek Yogurt with Honey and Nuts</h3>
+                        <p>280 kcal / 15g Protein / 10g Fat / 30g Carbs</p>
+                        <button class="btn">Recept</button>
+                    </div>
+                    <div class="recipe-card" onclick="openRecipe(
+                        'Vegetable Omelet',
+                        'images/omlet.jpg',
+                        'A nutritious and easy-to-make omelet with vegetables.',
+                        '350 kcal / 22g Protein / 18g Fat / 25g Carbs',
+                        'Ingredients: 2 eggs, 50ml milk, ½ bell pepper, ½ tomato, 30g cheese.',
+                        'Instructions: Whisk the eggs with milk. Add chopped vegetables and cheese. Cook in a pan for 3-5 minutes.'
+                    )">
+                        <img src="images/omlet.jpg">
+                        <h3>Vegetable Omelet</h3>
+                        <p>350 kcal / 22g Protein / 18g Fat / 25g Carbs</p>
+                        <button class="btn">Recept</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <div class="dropdown-header" onclick="toggleDropdown('lunchContent', 'icon-lunch')">
+                    <span class="arrow" id="icon-lunch">▶</span> Lunch
+                </div>
+                <div class="dropdown-content" id="lunchContent">
+                    <div class="recipe-card" onclick="openRecipe(
+                        'Buckwheat with Chicken',
+                        'images/Buckwheat.jpg',
+                        'A high-protein meal with chicken and nutritious buckwheat.',
+                        '400 kcal / 40g Protein / 10g Fat / 45g Carbs',
+                        'Ingredients: 100g buckwheat, 150g chicken breast, ½ onion, 1 tbsp olive oil, salt, pepper to taste.',
+                        'Instructions: Cook buckwheat according to package instructions. Sauté diced chicken and onion in olive oil. Mix with buckwheat.'
+                    )">
+                        <img src="images/Buckwheat.jpg">
+                        <h3>Buckwheat with Chicken</h3>
+                        <p>400 kcal / 40g Protein / 10g Fat / 45g Carbs</p>
+                        <button class="btn">Recept</button>
+                    </div>
+                    <div class="recipe-card" onclick="openRecipe(
+                        'Tuna Salad',
+                        'images/Tuna.jpg',
+                        'A refreshing salad with tuna, avocado, and lettuce.',
+                        '320 kcal / 30g Protein / 15g Fat / 20g Carbs',
+                        'Ingredients: 1 can (100g) tuna in water, 50g lettuce, ½ cucumber, ½ avocado, 1 tbsp olive oil, lemon juice to taste.',
+                        'Instructions: Chop the vegetables and mix with tuna. Drizzle with olive oil and lemon juice.'
+                    )">
+                        <img src="images/Tuna.jpg">
+                        <h3>Tuna Salad</h3>
+                        <p>320 kcal / 30g Protein / 15g Fat / 20g Carbss</p>
+                        <button class="btn">Recept</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <div class="dropdown-header" onclick="toggleDropdown('dinnerContent', 'icon-dinner')">
+                    <span class="arrow" id="icon-dinner">▶</span> Dinner
+                </div>
+                <div class="dropdown-content" id="dinnerContent">
+                    <div class="recipe-card" onclick="openRecipe(
+                        'Oatmeal with Berries and Almonds',
+                        'images/Oatmeal.jpg',
+                        'A healthy and delicious breakfast with oats and fresh berries.',
+                        '350 kcal / 10g Protein / 12g Fat / 50g Carbs',
+                        'Ingredients: 50g oats, 200ml milk or water, 50g mixed berries (strawberries, blueberries, raspberries), 10g almonds, 1 tsp honey.',
+                        'Instructions: Cook oats in milk or water. Top with berries, chopped almonds, and drizzle with honey.'
+                    )">
+                        <img src="images/Oatmeal.jpg">
+                        <h3>Oatmeal with Berries and Almonds</h3>
+                        <p>350 kcal / 10g Protein / 12g Fat / 50g Carbs</p>
+                        <button class="btn">Recept</button>
+                    </div>
+                    <div class="recipe-card" onclick="openRecipe(
+                        'Grilled Salmon with Quinoa',
+                        'images/salmon.jpg',
+                        'A protein-packed meal with grilled salmon and quinoa.',
+                        '450 kcal / 40g Protein / 20g Fat / 35g Carbs',
+                        'Ingredients: 150g salmon fillet, 80g quinoa, ½ zucchini, 1 tbsp olive oil, lemon juice, salt, pepper to taste.',
+                        'Instructions: Cook quinoa according to package instructions. Grill the salmon and sliced zucchini with olive oil. Serve with quinoa and drizzle with lemon juice.'
+                    )">
+                        <img src="images/salmon.jpg">
+                        <h3>Grilled Salmon with Quinoa</h3>
+                        <p>450 kcal / 40g Protein / 20g Fat / 35g Carbs</p>
+                        <button class="btn">Recept</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+
+<div id="recipeModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="document.getElementById('recipeModal').style.display='none'">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <img id="modalImage" src="" alt="Recipe Image">
+        <p id="modalDescription"></p>
+        <h3>Macros</h3>
+        <p id="modalCalories"></p>
+        <h3>Ingredients</h3>
+        <ul id="modalIngredients"></ul> 
+        <h3>Instructions</h3>
+        <p id="modalInstructions"></p>
+    </div>
+</div>
+
+
+</body>
+</html>
